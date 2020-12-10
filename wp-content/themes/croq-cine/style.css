@@ -1,0 +1,40 @@
+@charset "UTF-8";
+/*
+Theme Name: Croq'Ciné, thème enfant de Twenty Twenty
+Theme URI:	
+Description:Thème WordPress du site Croq'Ciné : http://wp.ldnr.fr/~martialbret/croq-cine/
+Version:	1.0
+Author:		Vous
+Template:	twentytwenty
+License:	formation LDNR
+Author URI:	Votre URI
+*/
+
+@import url("../twentytwenty/style.css");
+
+/* application d'une bordure gris clair de 3px aux images */
+.wp-block-image img {
+    /* spécification de la bordure */
+    border-style: solid;
+    border-width: 3px;
+    border-color: red;
+}		
+
+/* style des textes en préambule aux critiques */
+.preambule {
+    font-size: 2em;
+    font-style: italic;
+}	
+
+/* affichage des champs personnalisés associés à un article sous la forme :
+   date_sortie: 10/12/1947 | nationalite: Américain */
+   .croq-cine ul.post-meta {
+    list-style-type: none;	/* pas indispensable en pratique */
+}
+.croq-cine ul.post-meta li {
+    display: inline;
+    margin-left: 0.5rem;
+}
+.croq-cine ul.post-meta li:not(:last-child):after {
+    content: " |";
+}			
